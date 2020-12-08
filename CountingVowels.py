@@ -1,7 +1,7 @@
 # For loop to iterate over string x!
 # if there is a vowel within string x, then the total vowels will increment by one.
 import pyttsx3
-
+import os
 # Vowel Count that can be read and heard.
 def count_with_subtitles(x, total):
     engine = pyttsx3.init()
