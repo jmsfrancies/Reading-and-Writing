@@ -31,7 +31,7 @@ def Visually_Impaired(x, total):
 # main function that stores the vowel count
 def main():
     x = str(input("Please enter a statement with vowels in which you would like to have the total vowels counted: ").lower())
-    y = int(input("Enter 1 for heaing impaired and 2 to read the countdown, and 3 for the hearing and reading version: "))
+    y = int(input("Enter 1 for visually impaired and 2 to read the countdown, and 3 for the hearing and reading version: "))
     total = 0
     while True:
         if y in [1,2,3]:
