@@ -2,6 +2,7 @@
 # if there is a vowel within string x, then the total vowels will increment by one.
 import pyttsx3
 import os
+import time
 # Vowel Count that can be read and heard.
 def count_with_subtitles(x, total):
     engine = pyttsx3.init()
@@ -10,6 +11,7 @@ def count_with_subtitles(x, total):
             total += 1
             print("letter %s vowel #%d" % (i, total))
             engine.say("letter %s vowel #%d" % (i, total))
+            time.sleep(1)
 
     engine.runAndWait()
     
@@ -20,6 +22,7 @@ def Visually_Impaired(x, total):
         if i in ['a', 'e', 'i', 'o', 'u']:
             total += 1
             engine.say("letter %s vowel #%d" % (i, total))
+            time.sleep(1)
 
     engine.runAndWait()
 
@@ -39,6 +42,7 @@ def main():
                     if i in ['a', 'e', 'i', 'o', 'u']:
                         total += 1
                         print("letter %s vowel #%d" % (i, total))
+                        time.sleep(1)
                 break
             if y == 3:
                 count_with_subtitles(x, total)
