@@ -3,6 +3,7 @@ from random import randrange
 # The sentinel loop is a while loop with a conditional parameter, which is checking for the total amount of guesses.
 
 
+
 def guessing_game(new_word_to_guess, usable_letters):
     new_word_to_guess.lower()
     total = len(new_word_to_guess) + 5
