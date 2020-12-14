@@ -6,27 +6,21 @@ from random import randrange
 # and you will be asked once again. Otherwise, 
 # the program will tell you if you guessed 
 # too high or too low!
-
 def main():
     x = randrange(1,31)
     #print(x)
-    y = int(input("Please guess a number between 1 to 30: "))
-    total = 0
-    while total < 5:
-        if y < 1 or y > 30:
-            y = int(input("Please guess a number between 1 to 30: "))
-        else:
+    for y in range(5):
+        y = int(input("Please guess a number between 1 to 30: "))
+        if y >= 1 and y <= 30:
             if x == y:
                 print("Correct! you've guessed the correct number: {}".format(x))
                 break
             elif x > y:
                 print("You must guess higher to find the correct number")
-                total = total + 1
-                y = int(input("Please guess a number between 1 to 30: "))
             else:
                 print("You must guess lower than your previous number")
-                total = total + 1
-                y = int(input("Please guess a number between 1 to 30: "))
-                 
-        
+        else:
+            print("Please enter a number between 1 and 30 ")
+            break
+    print("The correct answer is: %d"%(x))
 main()        
