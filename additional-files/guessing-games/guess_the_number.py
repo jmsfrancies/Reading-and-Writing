@@ -21,6 +21,6 @@ def main():
                 print("You must guess lower than your previous number")
         else:
             print("Please enter a number between 1 and 30 ")
-            break
+        
     print("The correct answer is: %d"%(x))
 main()        
