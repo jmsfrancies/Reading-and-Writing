@@ -46,12 +46,16 @@ def guessing_game(new_word_to_guess, usable_letters):
 
 def main():
     guessing_word_list = ["hello", "goodbye", "sweet", "chicken",
-                          "tasty", "paper", "salad", "motorcycle", "bicycle", "train"]
+                          "tasty", "paper", "salad", "motorcycle", "bicycle", "train",
+                          "modem","router","python","chocolate","pizza","chess","main",
+                          "tame","fame","present","heart","banana","checkers","child",
+                          "house","warmth","friend","spoon","fork","knife","flat","mobile","hood",
+                          "good","food","shame","name","blame"]
     rand_int = randrange(1, len(guessing_word_list))
     usable_letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
                       "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     new_word_to_guess = guessing_word_list.pop(rand_int)
-    # print(new_word_to_guess)
+    print(new_word_to_guess)
     guessing_game(new_word_to_guess, usable_letters)
 
 
