@@ -12,7 +12,7 @@ def count_with_subtitles(x, total):
             print("letter %s vowel #%d" % (i, total))
             engine.say("letter %s vowel #%d" % (i, total))
             engine.runAndWait()
-            time.sleep(1)
+            time.sleep(.5)
             
 
     
@@ -24,7 +24,7 @@ def Visually_Impaired(x, total):
             total += 1
             engine.say("letter %s vowel #%d" % (i, total))
             engine.runAndWait()
-            time.sleep(1)
+            time.sleep(.5)
 
 
 
@@ -43,7 +43,7 @@ def main():
                     if i in ['a', 'e', 'i', 'o', 'u']:
                         total += 1
                         print("letter %s vowel #%d" % (i, total))
-                        time.sleep(1)
+                        time.sleep(.300)
                 break
             if y == 3:
                 count_with_subtitles(x, total)
