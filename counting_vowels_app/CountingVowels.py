@@ -26,7 +26,14 @@ def Visually_Impaired(x, total):
             engine.runAndWait()
             time.sleep(.5)
 
-
+#Vowel Count for the printed statements
+def Reading_The_Letters(x,total):
+    for i in x:
+        if i in ['a', 'e', 'i', 'o', 'u']:
+            total += 1
+            print("letter %s vowel #%d" % (i, total))
+            time.sleep(.300)
+    
 
 # main function that stores the vowel count
 def main():
@@ -39,11 +46,7 @@ def main():
                 Visually_Impaired(x, total)
                 break
             if y == 2:
-                for i in x:
-                    if i in ['a', 'e', 'i', 'o', 'u']:
-                        total += 1
-                        print("letter %s vowel #%d" % (i, total))
-                        time.sleep(.300)
+                Reading_The_Letters(x,total)
                 break
             if y == 3:
                 count_with_subtitles(x, total)
