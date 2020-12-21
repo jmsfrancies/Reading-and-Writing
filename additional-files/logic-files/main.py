@@ -1,6 +1,8 @@
 from graphics import *
 import time
 
+
+
 #Disjuncitve Syllogism Slide
 def Disjunctive(win, x, y):
     Title = Text(Point(350, 150), "Disjunctive Syllogism")
