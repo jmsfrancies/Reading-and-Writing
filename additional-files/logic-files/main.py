@@ -2,8 +2,7 @@ from graphics import *
 import time
 
 
-
-#Disjuncitve Syllogism Slide
+# Disjuncitve Syllogism Slide
 def Disjunctive(win, x, y):
     Title = Text(Point(350, 150), "Disjunctive Syllogism")
     Title.setTextColor("blue")
@@ -19,7 +18,9 @@ def Disjunctive(win, x, y):
     Title.undraw()
     Disjunctive.undraw()
 
-#Modus Ponens Slide
+# Modus Ponens Slide
+
+
 def ModusPonens(win, x, y):
     Title = Text(Point(350, 150), "Modus Ponens")
     Title.setTextColor("blue")
@@ -35,7 +36,9 @@ def ModusPonens(win, x, y):
     Title.undraw()
     ModusPonens.undraw()
 
-#Modus Tollens Slide
+# Modus Tollens Slide
+
+
 def ModusTollens(win, x, y):
     Title = Text(Point(350, 150), "Modus Tollens")
     Title.setTextColor("blue")
@@ -52,6 +55,8 @@ def ModusTollens(win, x, y):
     ModusTollens.undraw()
 
 # Conjunction Slide
+
+
 def Conjunction(win, x, y):
     Title = Text(Point(350, 150), "Conjunction")
     Title.setTextColor("blue")
@@ -68,6 +73,8 @@ def Conjunction(win, x, y):
     Conjunction.undraw()
 
 # Hypothetical Syllogism Slide
+
+
 def Hypothetical(win, x, y, z):
     Title = Text(Point(350, 150), "Hypothetical Syllogism")
     Title.setTextColor("blue")
@@ -84,6 +91,8 @@ def Hypothetical(win, x, y, z):
     Hypothetical.undraw()
 
 # Material Implication Syllogism Slide
+
+
 def Material_Implication(win, x, y):
     Title = Text(Point(350, 150), "Material Implication")
     Title.setTextColor("blue")
@@ -102,6 +111,8 @@ def Material_Implication(win, x, y):
     Title.setSize(20)
 
 # Dilemma Slide
+
+
 def Dilemma(win, x, y, z, a):
     Title = Text(Point(350, 150), "Dilemma")
     Title.setTextColor("blue")
@@ -128,21 +139,45 @@ def Dilemma(win, x, y, z, a):
 
 
 def main():
-
-    firstName = input("Enter Your First Name: ")
-    lastName = input("Enter Your Last Name: ")
+    # Logic Variables for the logic slides powerpoint
     x = "A"
     y = "B"
     z = "C"
     a = "D"
+
+    # Win object that creates the window and background color.
     win = GraphWin("Logic, Logic, Logic!", 700, 500)
-    win.setBackground("Yellow")
+    win.setBackground(color_rgb(200, 200, 200))
+
+    # Segment that is responsible for collecting and storing the first name and last name of the user.
+    first_name = Text(Point(200, 200), "Enter Your First Name: ").draw(win)
+    last_name = Text(Point(200, 250), "Enter Your Last Name: ").draw(win)
+    first_name_inputText = Entry(Point(325, 200), 15)
+    last_name_inputText = Entry(Point(325, 250), 15)
+    first_name_inputText.setText("")
+    last_name_inputText.setText("")
+    first_name_inputText.draw(win)
+    last_name_inputText.draw(win)
+
+    # Button to prompt the user to click after the user adds his or her name.
+    button = Text(Point(250, 300), "Click Anywhere To Start! ")
+    button.draw(win)
+    win.getMouse()
+
+    # Once the user clicks on the screen, the first name, last name, and the button are undrawn.
+    first_name.undraw()
+    last_name.undraw()
+    first_name_inputText.undraw()
+    last_name_inputText.undraw()
+    button.undraw()
+
+    # Slogan that describes what the different logic symbols look like and what they mean.
     Slogan = Text(Point(350, 250), """Hello, {0} {1}!
 Enjoy Learning some Logic.
 The (=>) conditional if then, statement.
 The '&' the conjunction, and the 'v'
 Disjunction symbol.
-ENJOY!""".format(firstName, lastName))
+ENJOY!""".format(first_name_inputText.getText(), last_name_inputText.getText()))
     Slogan.setTextColor("black")
     Slogan.setSize(22)
     Slogan.draw(win)
@@ -156,6 +191,7 @@ ENJOY!""".format(firstName, lastName))
     Slogan.undraw()
     time.sleep(2)
 
+    # Listed out functions for each slide utilized for the presentation
     Disjunctive(win, x, y)
     ModusPonens(win, x, y)
     ModusTollens(win, x, y)
