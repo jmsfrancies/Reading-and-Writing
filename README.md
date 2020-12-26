@@ -8,3 +8,4 @@
 ##### + Program that chooses a random number between one and thirty and user has five chances to get it right.
 ### guessing-the-letter
 ##### + Program that chooses a random word from a new word guess list that gives you the character length of the word plus five to guess the correct word. 
+##### + Logic-file is a python project that utilizes John Zelle's graphics module to present a logic slide for the user via a graphics window.

@@ -9,10 +9,10 @@ def slide_show(win):
     slide_show_dict = {"Disjunctive Syllogism": "P v Q\n~ P\nQ", "Modus Ponens": "P => Q\nP \nQ",
                        "Modus Tollens": "P => Q\n~ Q \n~ P", "Conjunction": "P & Q\nP\nQ",
                        "Material Implication": "~ P v Q\nP => Q", "Hypothectical Syllogism": "P=>Q\nQ=>R\nP=>R",
-                       "Dilemma": "P v Q\nP => R\nQ => S\nR v S"}
+                       "Dilemma": "P v Q\nP => R\nQ => S\nR v S","Double Negation":"P\n~~P"}
 
     # for loop that prints the slides onto the graphics window.
-    for i, value in slide_show_dict.items():
+    for i,value in slide_show_dict.items():
         Title = Text(Point(350, 150), i)
         Title.setTextColor("blue")
         Title.setSize(20)
