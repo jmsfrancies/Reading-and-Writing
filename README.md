@@ -9,3 +9,4 @@
 ### guessing-the-letter
 ##### + Program that chooses a random word from a new word guess list that gives you the character length of the word plus five to guess the correct word. 
 ##### + Logic-file is a python project that utilizes John Zelle's graphics module to present a logic slide for the user via a graphics window.
+##### + Shooting Range Game that utilizes John Zelle's graphics module.
