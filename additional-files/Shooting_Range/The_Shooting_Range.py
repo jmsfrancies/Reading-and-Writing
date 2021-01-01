@@ -2,8 +2,9 @@
 # however your game must be started by calling the main function in this file.
 from graphics import *
 import sys
+import os
 import time
-
+from playsound import playsound
 
 def Ready(win, title):
     # for loop to print each target ring onto the graphics window
@@ -19,6 +20,8 @@ def Ready(win, title):
     # Where the gunshots display
     for i in range(25):
         BulletHole = win.getMouse()
+        #Replace the pathname with the github pathname
+        playsound('/Users/jamesboonfrancies/Desktop/Reading-And-Writing/Reading-and-Writing/additional-files/Shooting_Range/9mmShot.mp3')
         x = BulletHole.getX()
         y = BulletHole.getY()
         BulletHole = Circle(Point(x, y), 2.5)
