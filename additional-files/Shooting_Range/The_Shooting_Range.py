@@ -18,7 +18,7 @@ def Ready(win, title):
         total = total + 1
 
     # Where the gunshots display
-    for i in range(25):
+    for i in range(8):
         BulletHole = win.getMouse()
         #Replace the pathname with the github pathname
         playsound('/Users/jamesboonfrancies/Desktop/Reading-And-Writing/Reading-and-Writing/additional-files/Shooting_Range/9mmShot.mp3')
