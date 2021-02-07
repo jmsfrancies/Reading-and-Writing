@@ -1,5 +1,0 @@
--i https://pypi.org/simple
-comtypes==1.1.7; platform_system == 'Windows'
-pypiwin32==223; platform_system == 'Windows'
-pyttsx3==2.90
-pywin32==300; platform_system == 'Windows'
