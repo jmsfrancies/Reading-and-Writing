@@ -9,7 +9,7 @@ def guessing_game(new_word_to_guess, usable_letters):
     total = len(new_word_to_guess) + 5
     guessed_letter_list = ""
     number_of_occurences = 0
-    while total > 0:
+    for i in range(total):
         guessed_letter = str(
             input("Please enter a letter found within the english alphabet: ")).lower()
         if guessed_letter not in usable_letters:
@@ -17,7 +17,6 @@ def guessing_game(new_word_to_guess, usable_letters):
                 guessed_letter))
         else:
             if guessed_letter not in new_word_to_guess:
-                total -= 1
                 usable_letters.remove(guessed_letter)
                 print("Guessed letters that are within the word".format(
                     guessed_letter_list))
@@ -25,7 +24,6 @@ def guessing_game(new_word_to_guess, usable_letters):
                     guessed_letter))
                 print(usable_letters)
             else:
-                total -= 1
                 usable_letters.remove(guessed_letter)
                 number_of_occurences += new_word_to_guess.count(guessed_letter)
                 print("letters that are in the word {}".format(
@@ -55,7 +53,7 @@ def main():
     usable_letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
                       "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     new_word_to_guess = guessing_word_list.pop(rand_int)
-    print(new_word_to_guess)
+    #print(new_word_to_guess)
     guessing_game(new_word_to_guess, usable_letters)
 
 
